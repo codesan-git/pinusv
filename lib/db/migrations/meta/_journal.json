@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1693987721923,
+      "tag": "0000_worthless_johnny_blaze",
+      "breakpoints": true
+    }
+  ]
+}
