@@ -5,8 +5,8 @@ import { NewComputer, insertComputerSchema, computers, computerIdSchema, Compute
 export const createComputer = async (computer: NewComputer) => {
   const newComputer = insertComputerSchema.parse(computer);
   try {
-    const [c] = await db.insert(computers).values(newComputer).returning();
-    return { computer: c };
+    await db.insert(computers).values(newComputer)
+    return true;
   } catch (err) {
     return { error: (err as Error).message ?? "Error, please try again" };
   }
